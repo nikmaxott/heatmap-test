@@ -64,8 +64,9 @@
     $.get('./Getech_Freeair_UTM30N.json', function(res) {
       // Use PapaParse to transform file into arrays
       var data = res.map(function(a) {
-        return [ parseFloat(a[0]), parseFloat(a[1]) ]
+        return [ a[0], a[1] ]
       })
+      console.log(data)
 
       // Add all points into a heat layer
       var heat = L.heatLayer(data, {
