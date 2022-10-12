@@ -64,7 +64,7 @@
     $.get('./Getech_Freeair_UTM30N.json', function(res) {
       // Use PapaParse to transform file into arrays
       var data = res.map(function(a) {
-        return [ a[0] / 1000, a[1] / 10000]
+        return [ a[0] / 10000, a[1] / 100000]
       })
       console.log(data)
 
