@@ -61,7 +61,7 @@
     }).addTo(map)
 
     // Read data from CSV file
-    $.get('./Getech_Freeair_UTM30N.json', function(res) {
+    $.get('./Getech_Freeair_ED50.json', function(res) {
       // Use PapaParse to transform file into arrays
       var data = res.map(function(a) {
         return [ a[0] / 10000, a[1] / 100000]
