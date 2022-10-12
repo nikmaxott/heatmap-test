@@ -64,7 +64,7 @@
     $.get('./Getech_Freeair_UTM30N.json', function(csvString) {
 
       // Use PapaParse to transform file into arrays
-      var data = Papa.parse(csvString.trim()).data.map(function(a) {
+      var data = data.map(function(a) {
         return [ parseFloat(a[0]), parseFloat(a[1]) ]
       })
 
