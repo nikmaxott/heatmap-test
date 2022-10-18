@@ -76,7 +76,8 @@
       // Add all points into a heat layer
       var heat = L.heatLayer(data, {
         gradient: {0.2: 'blue', 0.6: 'lime', 0.9: 'yellow', 1: 'red'},
-        max: max
+        max: max,
+        maxZoom: 16
       })
 
       // Add the heatlayer to the map
