@@ -56,6 +56,7 @@
     var labels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd',
+      max: 140,
       maxZoom: 19,
       pane: 'shadowPane'  // always display on top
     }).addTo(map)
@@ -70,7 +71,7 @@
 
       // Add all points into a heat layer
       var heat = L.heatLayer(data, {
-        gradient: {0.0: 'blue', 0.45: 'lime', 1: 'red'}
+        gradient: {0.4: 'blue', 0.45: 'lime', 1: 'red'}
       })
 
       // Add the heatlayer to the map
